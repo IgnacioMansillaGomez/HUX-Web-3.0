@@ -19,7 +19,7 @@ export const Welcome = () => {
   return (
     <section className="flex w-full justify-center items-center">
       <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
-        <div className="flex flex-1 justify-start flex-col mf:mr-10">
+        <div className="flex flex-1 justify-start items-start flex-col mf:mr-10">
           <h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">
             Send Crypto <br /> across the world
           </h1>
@@ -30,6 +30,7 @@ export const Welcome = () => {
           <button className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]">
             <p className="text-white text-base font-semibold">Connect Wallet</p>
           </button>
+
           <section className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
             <div className={`rounded-tl-2xl ${commonStyles}`}>Reliability</div>
             <div className={commonStyles}>Security</div>
@@ -38,9 +39,10 @@ export const Welcome = () => {
             <div className={commonStyles}>Low fees</div>
             <div className={`rounded-br-2xl ${commonStyles}`}>Blockchain</div>
           </section>
+
           <section className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
-            <div className="p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorpism">
-              <div className="flex justify-between flex-col w-full h-full ">
+            <div className="p-3 flex justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card .white-glassmorphism">
+              <div className="flex justify-between flex-col w-full h-full">
                 <section className="flex justify-between items-start">
                   <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
                     <SiEthereum fontSize={21} color="#fff" />
@@ -68,7 +70,7 @@ export const Welcome = () => {
               type="type"
               className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism"
               step="0.0001"
-              onChange={(e: any) => handleChange(e, name)}
+              onChange={(e: any) => handleChange(e, "")}
               value={undefined}
             />
             <Input
@@ -77,7 +79,7 @@ export const Welcome = () => {
               type="number"
               className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism"
               step="0.0001"
-              onChange={(e: any) => handleChange(e, name)}
+              onChange={(e: any) => handleChange(e, "")}
               value={undefined}
             />
             <Input
@@ -87,7 +89,7 @@ export const Welcome = () => {
               className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism"
               step="0.0001"
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                handleChange(e, name)
+                handleChange(e, "")
               }
               value={undefined}
             />
@@ -98,7 +100,7 @@ export const Welcome = () => {
               className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism"
               step="0.0001"
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                handleChange(e, name)
+                handleChange(e, "")
               }
               value={undefined}
             />
